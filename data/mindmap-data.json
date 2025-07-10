@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "node-1",
+      "x": -40.0925,
+      "y": 195.756,
+      "text": "Hello guys how are you?"
+    },
+    {
+      "id": "node-2",
+      "x": 512.046,
+      "y": 189.228,
+      "text": "Branch 1"
+    },
+    {
+      "id": "node-3",
+      "x": 312.094,
+      "y": 445.222,
+      "text": "Branch 2"
+    },
+    {
+      "id": "node-4",
+      "x": 511.558,
+      "y": 510.708,
+      "text": "Branch 2"
+    },
+    {
+      "id": "node-5",
+      "x": 2.87747,
+      "y": 302.744,
+      "text": "Branch 2"
+    },
+    {
+      "id": "node-6",
+      "x": 294.333,
+      "y": 97,
+      "text": "New Node"
+    }
+  ],
+  "connections": [],
+  "view": {
+    "scale": 1,
+    "translateX": 268.66667383688485,
+    "translateY": 1
+  }
+}

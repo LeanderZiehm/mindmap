@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Canvas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="viewport">
+        <div id="canvas">
+            <div id="connections">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn" onclick="mindMap.resetView()">Reset View</button>
+    </div>
+
+    <div class="instructions">
+        <strong>Instructions:</strong><br>
+        • Double-click: Create node<br>
+        • Click node: Edit text<br>
+        • Drag node: Move<br>
+        • Ctrl+drag: Connect nodes<br>
+        • Click line: Delete connection<br>
+        • Right-click: Context menu<br>
+        • Drag empty space: Pan<br>
+        • Scroll: Zoom
+    </div>
+
+    <!-- Context Menu -->
+    <div id="contextMenu" class="context-menu">
+        <div class="context-menu-item" onclick="mindMap.createNodeFromMenu()">
+            <span>📝</span> Create Empty Node
+        </div>
+        <div class="context-menu-item" onclick="mindMap.showPasteDialog()">
+            <span>📋</span> Paste Text as Node
+        </div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item danger" onclick="mindMap.deleteNodeFromMenu()">
+            <span>🗑️</span> Delete Node
+        </div>
+    </div>
+
+    <!-- Paste Dialog -->
+    <div id="pasteDialog" class="paste-dialog">
+        <div class="paste-dialog-content">
+            <h3>Create Node from Text</h3>
+            <textarea id="pasteTextarea" placeholder="Enter text for the new node..."></textarea>
+            <div class="paste-dialog-buttons">
+                <button class="paste-dialog-btn secondary" onclick="mindMap.hidePasteDialog()">Cancel</button>
+                <button class="paste-dialog-btn primary" onclick="mindMap.createNodeFromPaste()">Create Node</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript modules -->
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/mindmap.js"></script>
+    <script>
+        // Initialize the mind map
+        const mindMap = new MindMap();
+    
+    </script>
+</body>
+</html>
