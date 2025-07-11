@@ -5,7 +5,7 @@ const storageRoutes = require('./routes/storage');
 const app = express();
 app.use(express.static(path.join(__dirname, 'src/public')));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5003;
 
 // Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
